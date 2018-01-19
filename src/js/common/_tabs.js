@@ -7,7 +7,8 @@ module.exports = function() {
   
   window.onload = function () {
 
-    for( i = 0; i < tabs.length; i++ ) {    
+    for( i = 0; i < tabs.length; i++ ) {
+      
       tabs[i].onclick = function(e) {
         e.preventDefault()
       };

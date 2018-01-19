@@ -1,3 +1,6 @@
-const activTabs = require('./common/_tabs')
+'use strict';
+const activTabs = require('./common/_tabs');
+const skills = require('./common/_skills');
 
-activTabs();
+activTabs ();
+skills ();

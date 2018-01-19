@@ -2,10 +2,10 @@
   .container
     .admin-title
       h2.admin-title__text Страница "Обо мне"
-    ul.skills__item_list
+    ul.skills__item_list#skills__item_list
       each skill,index in skillsTitle
         li.skills__item
-          h3.skills__item_title #{skill}
+          h3.skills__item_title #{ skill.title }
           ul.skills__item_name
             case index
               when 0
@@ -31,7 +31,7 @@
                     button.button-remove(type="button") Удалить скил
           .button-skill
             label(for="")
-              input.input.button-add__input(placeholder="Название" type="text" id="")
-            button.button-add(type="button") Добавить скил
+              input.input.button-add__name(placeholder="Название" type="text" id=`${ skill.idInput }`)
+              input.input.button-add__num(placeholder="0" type="text" id=`${ skill.idNumInput }`)
+            button.button-add(id=`${ skill.idButton }` type="button") Добавить скил
     button.button.skills-button( type="submit" ) Сохранить
-  include ../common/_modal.pug
