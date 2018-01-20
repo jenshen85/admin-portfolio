@@ -40,10 +40,7 @@ module.exports = function() {
     let val = nameSkillsInput[ind].value;
     let valNum = numInput[ind].value;
     
-    console.log();
-    
-    
-    if ( val !== '' && !isNaN(valNum) && valNum !== '' ) {
+    if ( val !== '' && !isNaN(valNum) && valNum !== '' ) {    //  валидация полей skills
 
       skillItemName[ind].appendChild(
         create("li", {class: 'item__name_row'},
@@ -57,11 +54,16 @@ module.exports = function() {
       numInput[ind].value = '';
       removeButton = Array.from(document.getElementsByClassName('button-remove')); //обновление массива removeButton
 
-    } else if (val == '') {
+      if (nameSkillsInput[ind].classList.contains('input-error') || numInput[ind].classList.contains('input-error')) {
+        nameSkillsInput[ind].classList.remove('input-error');
+        numInput[ind].classList.remove('input-error');
+      }
+
+    } else if (val == '') {   //  валидация полей skills
 
       nameSkillsInput[ind].classList.add('input-error');
 
-    } else if ( Number.valNum === undefined ) {
+    } else if ( Number.valNum === undefined ) {   //  валидация полей skills
 
       numInput[ind].classList.add('input-error');
 
