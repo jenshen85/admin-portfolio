@@ -18,19 +18,17 @@ module.exports = function() {
   addButtonWork.onclick = addSkill;
   addButtonBack.onclick = addSkill;
   
-  skillsWrapp.onclick = function () {
+  skillsWrapp.onclick = function (e) {
     
+    let target = e.target
+
     for (i = 0; i < removeButton.length; i++ ) {
-      
-      let removeBtn = removeButton[i];
-      
-      removeBtn.onclick = function (e) {
 
-        let target = e.target;
-        let removedSkill = target.parentNode;
-        
+      if ( removeButton[i] === target ) {
+
+        let currDelBtn = removeButton[i];
+        let removedSkill = currDelBtn.parentNode;
         removedSkill.parentNode.removeChild(removedSkill);
-
       }
     }
   }
