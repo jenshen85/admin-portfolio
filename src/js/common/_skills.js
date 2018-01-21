@@ -1,4 +1,5 @@
 module.exports = function() {
+//------------------------ variables ------------------------//
   let skillsWrapp = document.getElementById('skills__item_list');                         //  область со скиллами
   let skillItemName = Array.from(document.getElementsByClassName('skills__item_name'));   //  родитель для удаленния скилла
   let skillItem = Array.from(document.getElementsByClassName('item__name_row'));          //  удаляемый/добавляеммый скилл
@@ -12,6 +13,8 @@ module.exports = function() {
   let addButtonFront = document.getElementById('button-front');
   let addButtonWork = document.getElementById('button-work');
   let addButtonBack = document.getElementById('button-back');
+
+//------------------------ variables ------------------------//
 
 
   addButtonFront.onclick = addSkill;
