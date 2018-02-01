@@ -1,12 +1,17 @@
 .skills__item_list
   display: flex
   flex-wrap: wrap
-  justify-content: space-around
+  // justify-content: space-around
 
 .skills__item
   display: flex
   flex-direction: column
   margin-bottom: 30px
+  margin-right: 30px
+  background: rgba(255, 255, 255, 0.3)
+  padding: 25px
+  border-radius: 10px
+
 
 .skills__item_title
   font-family: 'roboto', serif
@@ -44,20 +49,21 @@
   margin-right: 30px
 
 .button-add__name
-  margin-right: 25px
+  margin-right: 30px
   width: 200px
 
 .button-add__num
   width: 46px
   margin-right: 35px
-  padding: 16px 10px
+  padding: 10px
+  text-align: center
 
 .button-remove, .button-add
   background: $green
   border: transparent
   border-radius: 5px
   color: #fff
-  padding: 5px 5px
+  padding: 10px
   cursor: pointer
   transition: all .5s
   font-family: 'roboto', Arial, Helvetica, sans-serif
