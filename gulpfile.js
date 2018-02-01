@@ -43,9 +43,6 @@
             src:'src/templates/pages/*.pug',
             dest:'dist/'
           },
-          srcTemplates: {
-            src:'src/templates/**/*.pug'
-          },
           svg: {
             src:'src/images/svg/**/*.svg',
             dest:'src/images/img/icons/sprite/'
@@ -76,9 +73,8 @@
         };
       })
     }))
-    .pipe(gP.pug({ pretty: true }))
+    .pipe(gP.pug())
     .pipe(gulp.dest(paths.templates.dest))
-    .pipe(browserSync.stream({once: true}));
   };
 
 // styles
@@ -197,7 +193,7 @@
 // watch
 
   function watch() {
-    gulp.watch([paths.templates.src, paths.srcTemplates.src], templates);
+    gulp.watch(paths.templates.src, templates);
     gulp.watch(paths.styles.src, styles);
     gulp.watch([paths.scripts.src, paths.srcScripts.src], scripts);
     gulp.watch(paths.svg.src, svgSpriteBuild);
@@ -237,7 +233,6 @@
 // folder structure
 
   gulp.task('src', shell.task([
-    'mkdir "src/sass" "src/js" "src/templates" "src/images"',
     'mkdir "src/sass/common" "src/js/common"',
     'mkdir "src/templates/common" "src/templates/pages"',
     'mkdir "src/images/svg" "src/images/img"',

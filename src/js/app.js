@@ -7,6 +7,6 @@ const dateToday = require('./common/_date');
 
 gen ();
 activTabs ();
-dateToday ();
 skills ();
 validate ();
+dateToday ();
