@@ -7,7 +7,13 @@
   align-items: center
   padding: 30px 0
 
+  +tablets
+    flex-direction: column
+    justify-content: center
+    align-items: center
+
 .title_text
+  white-space: nowrap
   font-family: 'roboto', serif
   font-size: 28px
   font-weight: 500
@@ -16,7 +22,11 @@
 .admin-header__left
   margin-right: auto
 
+  +tablets
+    margin-right: 0
+
 .admin-header__link
+  white-space: nowrap
   font-family: 'roboto', serif
   font-size: 16px
   font-weight: 500

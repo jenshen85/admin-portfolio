@@ -30,8 +30,9 @@
                     .skill-percent %
                     button.button-remove(type="button") Удалить скил
           .button-skill
-            label(for="")
+            label(for="").buton-add__fild
               input.input.button-add__name(placeholder="Название" type="text" id=`${ skill.idInput }`)
               input.input.button-add__num(placeholder="0" type="text" id=`${ skill.idNumInput }`)
             button.button-add(id=`${ skill.idButton }` type="button") Добавить скил
-    button.button.skills-button( type="submit" ) Сохранить
+    .button-wrapp
+      button.button.skills-button( type="submit" ) Сохранить

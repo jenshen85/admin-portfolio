@@ -1,7 +1,12 @@
 .skills__item_list
   display: flex
   flex-wrap: wrap
-  // justify-content: space-around
+
+  +tablets
+    justify-content: center
+    align-items: center
+    flex-wrap: nowrap
+    flex-direction: column
 
 .skills__item
   display: flex
@@ -12,6 +17,13 @@
   padding: 25px
   border-radius: 10px
 
+  +tablets
+    width: 100%
+    margin-right: 0px
+  
+  +phones
+    padding: 10px
+
 
 .skills__item_title
   font-family: 'roboto', serif
@@ -19,6 +31,10 @@
   font-size: 16px
   color: $text
   padding-bottom: 25px
+
+.skills__item_name
+  border-bottom: 3px solid $beg
+  margin-bottom: 10px
 
 .item__name_row
   display: flex
@@ -32,6 +48,10 @@
 .scill-name
   margin-right: 30px
   min-width: 200px
+
+  +tablets
+    margin-right: auto
+    min-width: 150px
 
 .skills-number
   width: 46px
@@ -48,15 +68,27 @@
 .skill-percent
   margin-right: 30px
 
+  +tablets
+    margin-right: 10px
+  
+  +phones
+    display: none
+
 .button-add__name
   margin-right: 30px
-  width: 200px
+  max-width: 200px
+
+  +tablets
+    max-width: 150px
+    margin-right: 10px
 
 .button-add__num
   width: 46px
-  margin-right: 35px
   padding: 10px
   text-align: center
+
+  +tablets
+    margin-right: 10px
 
 .button-remove, .button-add
   background: $green
@@ -68,11 +100,25 @@
   transition: all .5s
   font-family: 'roboto', Arial, Helvetica, sans-serif
   font-size: 16px
+  white-space: nowrap
 
   &:hover
     background: $grHov
+
+.button-remove
+  padding: 10px 15px
 
 .button-add__input
   width: 200px
   font-family: 'roboto', Arial, Helvetica, sans-serif
   font-size: 16px
+
+.button-skill
+  display: flex
+  
+.buton-add__fild
+  display: flex
+  margin-right: auto
+
+  +phones
+    margin-bottom: 10px

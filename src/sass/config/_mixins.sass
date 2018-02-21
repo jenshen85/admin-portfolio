@@ -1,5 +1,4 @@
 // Media
-
 @mixin laptop 
   @media screen and (max-width: $laptop)
     @content;
@@ -8,12 +7,10 @@
   @media screen and (max-width: $tablets)
     @content;
 
-
-// @mixin tablets($orientation)
-//   @media screen and (max-width: $tablets) and (orientation: $orientation)
-//     @content;
-
-
 @mixin phones()
   @media screen and (max-width: $phones)
+    @content;
+
+@mixin phones-min()
+  @media screen and (max-width: $phones-min)
     @content;
